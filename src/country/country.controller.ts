@@ -5,12 +5,12 @@ import { ShortCountryDto } from './dto-external/country.dto';
 import { CountryCodeDto } from './dto/country-code.dto';
 import { CountryDto } from './dto/detailed-country.dto';
 
-@ApiTags('country')
-@Controller('country')
+@ApiTags('countries')
+@Controller('countries')
 export class CountryController {
   constructor(private readonly countryService: CountryService) {}
 
-  @Get('all')
+  @Get('')
   @ApiResponse({
     status: 200,
     description: 'Get all countries',
